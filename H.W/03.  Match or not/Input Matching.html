@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>A Form For input matching</h2>
+
+<form name="f1" onsubmit="return validate()"  method="post">
+	Enter a value: <input name="Enter a value:" required>
+	Retype the value: <input name="Retype the value:" required>
+    <input type="submit" value="Submit">
+</form>
+
+<p id="name" class="container"></p>
+
+<script>
+const element = document.getElementById("name");
+let text;
+if (element.matches(".container")) {
+  text = "This element matches the CSS selector";
+} else {
+  text = "This element does not match the CSS selector";
+}
+document.getElementById("name").innerHTML = text;
+</script>
+return;
+</body>
+</html>

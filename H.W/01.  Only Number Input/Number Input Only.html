@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>A Form For Number Input</h2>
+
+<form name="f1" onsubmit="return validate()"  method="post" action="./secondFormPage.html">
+	Enter A Value (Number Only): <input type="number" name="Input A Number:" required>
+    <input type="submit" value="Submit">
+</form>
+
+<p id="name"></p>
+
+  <script>
+	function validate()
+    {
+    	let nameForm = document.forms["f1"];
+        let nameValue = nameForm["Input A Number:"].value;
+        
+        document.getElementById("name").innerHTML = nameValue;
+        alert(nameValue);
+		return;
+    }
+</script>
+
+</body>
+</html>
